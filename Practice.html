@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		
+		<title>
+			Vaivanin Systech
+		</title>		
+		<link rel="icon" href="./Images/Logo.png" type="image/icon type">
+
+		<style>
+			.container
+			{
+				border:2px solid red;
+				background-color: cyan;
+				margin: 3px 0;
+				padding: 10px;
+			}
+			.bg-pri
+			{
+				background-color: brown;
+			} 
+			.txt-pri
+			{
+				color: aqua;
+			}
+		</style>		
+	</head>	
+	<body>
+		<h1 style = "color:green;">
+            Vainavin Systech
+		</h1>
+		<div id="firstcontainer" class="container">	<button id="click" onclick="Clicked()">click</button>
+		</div>
+		<div class="pra">
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, error molestiae. Minima aliquam tempora ipsa, deserunt molestiae minus aut officia.</p>
+		</div>
+		<div class="pra">
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, error molestiae. Minima aliquam tempora ipsa, deserunt molestiae minus aut officia.</p>
+		</div>
+	<br><br>
+<script>
+let elem=document.getElementById('click');
+let elemclass=document.getElementsByClassName("pra");
+console.log(elem);
+console.log(elemclass);
+elem.style.background="yellow";
+elem.style.fontSize="30px";
+elemclass[0].classList.add("bg-pri");
+elemclass[0].classList.add("txt-pri");
+// tn=document.getElementsByTagName('div')
+// console.log(tn)
+// createdElement=document.createElement('p');
+// createElement.innertext="this is paragrpagh";
+// tn[0].appendchild(createElement);
+
+	sel=document.querySelector('.container')
+	console.log(sel)
+	sel=document.querySelectorAll('.container')
+	console.log(sel)
+
+	document.write("Hello");
+	console.log("Hello World");
+	console.warn("Danger");
+	console.error("Error");
+	// console.clear();
+
+	var num1=10;
+	var num2=20;
+	console.log(num1 + num2);
+	document.write( num1 + num2);
+
+	var marks={
+		ravi:34,
+		shubham:78,
+		harry:99
+	}
+	console.log(marks);  
+
+	var arr=[1,2,3,4,5];
+	console.log(arr);
+
+	function avg(a,b)
+	{
+		c=(a+b)/2;
+		return c;
+	}
+	c1=avg(4,6);
+	c2=avg(14,16);
+	console.log(c1,c2);
+
+	var age=4;
+	if(age<25)
+	{
+		console.log("You are kid");
+	}
+	else
+	{
+		console.log("You are older")
+	}
+
+var arr=[1,"two",3,"Four",5,6,7];
+// hide last value
+arr.pop();
+// add value
+arr.push("Eight");
+// hide first value
+arr.shift();
+console.log(arr);
+
+
+for(var i=0;i<=arr.length;i++)
+{
+	console.log(arr[i])
+} 
+
+let str="string Method in javascript";
+console.log(str.length);
+console.log(str.indexOf("g"));
+console.log(str.slice(1,5));
+d=str.replace("string","number");
+console.log(d,str);
+
+let myDate = new Date();
+console.log(myDate);
+console.log(myDate.getTime());
+console.log(myDate.getFullYear());
+console.log(myDate.getDay());
+console.log(myDate.getMinutes());
+console.log(myDate.getHours());
+
+function Clicked()
+{
+	console.log('the  button was clicked');
+}
+// firstcontainer.addEventListner('mouseover',function()
+// {
+// 	console.log("mouse on Container")
+// })
+// firstcontainer.addEventListner('click',function()
+// {
+// 	console.log("Click On Container")
+// })
+</script>
+
+</html>					

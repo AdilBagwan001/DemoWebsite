@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+  });
+});
+$(document).ready(function(){
+  $("#btn2").click(function(){
+    $("#p2").hide("slow", function(){
+      alert("The paragraph is now hidden");
+    });
+  });
+});
+$(document).ready(function(){
+  $("#btn3").click(function(){
+    var div = $(".ani1");
+    div.animate({height: '300px', opacity: '0.4'}, "slow");
+    div.animate({width: '300px', opacity: '0.8'}, "slow");
+    div.animate({height: '100px', opacity: '0.4'}, "slow");
+    div.animate({width: '100px', opacity: '0.8'}, "slow");
+  });
+});
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#btn4").click(function(){
+    $("#div1").fadeToggle();
+    $("#div2").fadeToggle("slow");
+    $("#div3").fadeToggle(3000);
+  });
+});
+$(document).ready(function(){
+  $("#btn5").click(function(){
+    $(".p2").toggle(1000);
+  });
+});
+$(document).ready(function(){
+  $("#btn6").click(function(){
+    alert("Value: " + $("#test").val());
+  });
+});
+$(document).ready(function(){
+  $("#btn7").click(function(){
+    $(".p4").append(" <b>Appended text</b>.");
+  });
+
+  $("#btn8").click(function(){
+    $("ol").append("<li>Appended item</li>");
+  });
+});
+$(document).ready(function(){
+  $("#btn9").click(function(){
+    $(".p5").before("<b>Before</b>");
+  });
+
+  $("#btn10").click(function(){
+    $(".p5").after("<i>After</i>");
+  });
+});
+$(document).ready(function(){
+  $("#btn11").click(function(){
+    $("#div4").addClass("important blue");
+  });
+});
+$(document).ready(function(){
+  $("#btn12").click(function(){
+    $("h1, h2, p").toggleClass("blue");
+  });
+});
+$(document).ready(function(){
+  $("#btn13").click(function(){
+    $(".p6").css({"background-color": "yellow", "font-size": "200%"});
+  });
+});
+ 
+</script>
+<style> 
+    #panel, #flip {
+      padding: 5px;
+      text-align: center;
+      background-color: #e5eecc;
+      border: solid 1px #c3c3c3;
+    }
+    
+    #panel {
+      padding: 50px;
+      display: none;
+    }
+    .important {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.blue {
+  color: blue;
+}
+    </style>
+</head>
+<body>
+      <p id="p1">jQuery is fun!!</p>
+<button id="btn1">Click me</button>
+<br><br>
+
+<button id="btn2">Hide</button>
+<p id="p2">This is a paragraph with little content.</p>
+<br><br>
+
+
+<div id="flip">Click to slide the panel down or up</div>
+<div id="panel">Hello world!</div>\
+<br><br>
+
+<button id="btn3">Start Animation</button>
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+<div class="ani1" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+<br><br><br><br><br><br><br>
+
+
+<button id="btn4">Click to fade in/out boxes</button><br><br>
+<div id="div1" style="width:80px;height:80px;background-color:red;"></div>
+<br>
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div>
+<br>
+<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+<br><br><br>
+
+
+<button id="btn5">Toggle between hiding and showing the paragraphs</button>
+<p class="p2">This is a paragraph with little content.</p>
+<p class="p2">This is another small paragraph.</p>
+<br><br>
+
+
+<p class="p3">Name: <input type="text" id="test" placeholder="Enter Value" value=""></p>
+<button id="btn6">Show Value</button>
+<br><br>
+
+
+<p class="p4">This is a paragraph.</p>
+<p class="p4">This is another paragraph.</p>
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+<button id="btn7">Append text</button>
+<button id="btn8">Append list items</button>
+<br><br>
+
+
+<p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, rerum.</p><br>
+<button id="btn9">Insert before</button>
+<button id="btn10">Insert after</button>
+<br><br>
+
+
+<div id="div4">This is some text.</div>
+<div id="div5">This is some text.</div>
+<br>
+<button id="btn11">Add classes to first div element</button>
+<br><br>
+
+
+
+<h1 class="blue">Heading 1</h1>
+<h2 class="blue">Heading 2</h2>
+<p class="blue">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button id="btn12">Remove class from elements</button>
+<br><br>
+
+
+<p class="p6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, perferendis!</p>
+<p class="p6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, perferendis!</p>
+<p class="p6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, perferendis!</p>
+<button id="btn13">Change style</button>
+
+
+</body>
+</html>
